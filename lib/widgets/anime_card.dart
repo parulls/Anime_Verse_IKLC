@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+import '../config/routes.dart';
 
 class AnimeCard extends StatelessWidget {
   final String id;
@@ -16,7 +19,11 @@ class AnimeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
-    return LayoutBuilder(
+    return GestureDetector(
+      onTap: () {
+        context.push('${AppRoutes.details}/$id');
+      },
+      child: LayoutBuilder(
       builder: (context, constraints) {
         final cardWidth = constraints.maxWidth;
         return SizedBox(
@@ -67,6 +74,7 @@ class AnimeCard extends StatelessWidget {
           ),
         );
       },
+    )
     );
   }
 }
