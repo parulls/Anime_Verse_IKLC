@@ -98,7 +98,7 @@ class SignUpScreen extends StatelessWidget {
                       height: screenHeight * 0.075,
                       child: ElevatedButton(
                         onPressed: () {
-                          context.go(AppRoutes.home);
+                          context.go(AppRoutes.signIn);
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue.withValues(alpha: 0.8),

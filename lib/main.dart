@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iklc_anime_verse/screens/detail_screen.dart';
-import 'package:iklc_anime_verse/screens/favorite_screen.dart';
-import 'package:iklc_anime_verse/screens/home_screen.dart';
-import 'package:iklc_anime_verse/screens/profile_screen.dart';
-import 'package:iklc_anime_verse/screens/signin_screen.dart';
-import 'package:iklc_anime_verse/screens/signup_screen.dart';
-import 'package:iklc_anime_verse/config/routes.dart';
+import 'config/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,12 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return MaterialApp.router( //tambahkan router untuk navigasi
       title: 'Anime Verse',
       theme: ThemeData(
         fontFamily: 'Urbanist',
       ),
-      routerConfig: createRouter(),
+      routerConfig: createRouter(), //gunakan createRouter untuk konfigurasi router
       debugShowCheckedModeBanner: false,
     );
   }
