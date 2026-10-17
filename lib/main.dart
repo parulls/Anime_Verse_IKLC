@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iklc_anime_verse/providers/app_state_provider.dart';
+import 'package:provider/provider.dart';
 import 'config/routes.dart';
 
 void main() {
@@ -11,13 +13,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router( //tambahkan router untuk navigasi
-      title: 'Anime Verse',
-      theme: ThemeData(
-        fontFamily: 'Urbanist',
+    return ChangeNotifierProvider(
+      create: (_) => AppStateProvider(),
+      child: MaterialApp.router( //tambahkan router untuk navigasi
+        title: 'Anime Verse',
+        theme: ThemeData(
+          fontFamily: 'Urbanist',
+        ),
+        routerConfig: createRouter(), //gunakan createRouter untuk konfigurasi router
+        debugShowCheckedModeBanner: false,
       ),
-      routerConfig: createRouter(), //gunakan createRouter untuk konfigurasi router
-      debugShowCheckedModeBanner: false,
     );
   }
 }
