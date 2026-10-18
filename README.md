@@ -140,8 +140,8 @@ Setiap praktikan diwajibkan mengikuti standar *version control* selama pengerjaa
 
 - [x] **Modul 1**: Pengenalan Environment, Installation & Dart Syntax Dasar
 - [x] **Modul 2**: Fondasi UI (Widget Tree, Layouting, Responsive Design, Asset & Font Registration)
-- [ ] **Modul 3**: Navigasi Deklaratif menggunakan `go_router`
-- [ ] **Modul 4**: State Management menggunakan `provider` & Local State
+- [x] **Modul 3**: Navigasi Deklaratif menggunakan `go_router`
+- [x] **Modul 4**: State Management menggunakan `provider` & Local State
 - [ ] **Modul 5**: Integration REST API (JikanAPI v4) & Repository Pattern
 - [ ] **Modul 6**: Firebase Authentication (Email/Password & Google Sign-In)
 - [ ] **Modul 7**: Storage & Database (SQLite / Firestore)
